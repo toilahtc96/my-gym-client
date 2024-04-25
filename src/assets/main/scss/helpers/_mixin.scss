@@ -1,0 +1,88 @@
+/************************** 
+* Media Query
+***************************/
+
+@mixin respond($breackpoint) {
+    @if ($breackpoint=="mini-phone") {
+        @media only screen and (max-width: 320px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="iphone") {
+        @media only screen and (max-width: 375px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="iphone-6-plus") {
+        @media only screen and (max-width: 414px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="a-kindle") {
+        @media only screen and (max-width: 480px) {
+            @content;
+        }
+    }
+    /* Extra small devices (portrait phones, less than 576px) */
+    @if ($breackpoint=="phone") {
+        @media only screen and (max-width: 575.98px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="small-tablet") {
+        @media only screen and (max-width: 600px) {
+            @content;
+        }
+    }
+    /* Small Devices */
+    @if ($breackpoint=="phone-land") {
+        @media only screen and (max-width: 767.98px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="min-tab") {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="tab-port") {
+        @media only screen and (max-width: 991.98px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="medium-devices") {
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="large-devices") {
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="tab-land") {
+        @media only screen and (max-width: 1199px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="laptop") {
+        @media only screen and (max-width: 1400px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="desktop") {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="mid-desktop") {
+        @media only screen and (max-width: 1600px) {
+            @content;
+        }
+    }
+    @if ($breackpoint=="big-desktop") {
+        @media only screen and (min-width: 1800px) {
+            @content;
+        }
+    }
+}

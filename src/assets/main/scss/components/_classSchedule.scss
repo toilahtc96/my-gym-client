@@ -1,0 +1,198 @@
+/* --------------------------------------
+   9. Schedule
+-----------------------------------------*/
+
+.class-schedule {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include respond("medium-devices") {
+        padding-bottom: 65px;
+    }
+    @include respond("phone-land") {
+        padding-top: 80px;
+        padding-bottom: 45px;
+    }
+    .filter-menu {
+        text-align: $text-center;
+        margin-bottom: 50px;
+        .list-filter {
+            li {
+                display: inline-block;
+                margin: 0 10px 4px 0;
+                font-size: 15px;
+                font-weight: $font-600;
+                letter-spacing: 0.2px;
+                border-radius: 4px;
+                cursor: pointer;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            .text {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.class-schedule .filter-menu .list-filter li.active {
+    background-color: $primary;
+    color: $white;
+}
+
+.class-schedule .timetable table {
+    width: 100%;
+}
+
+.class-schedule .timetable tr {
+    border: $border-width $border-style-solid #e5e5e5;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.class-schedule .timetable tr td {
+    border-right: $border-width $border-style-solid #e5e5e5;
+    padding: 20px 10px;
+    color: $gray-1;
+    font-size: 15px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.class-schedule .timetable tr td.time,
+.class-schedule .timetable tr.table-head td {
+    font-weight: $font-500;
+}
+
+.class-schedule .timetable tr td h4 {
+    color: $primary;
+    font-size: 15px;
+    font-weight: $font-600;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+.class-schedule .timetable tr td span {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.class-schedule .timetable tr td h5 {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-top: 8px;
+    text-transform: capitalize;
+}
+
+.class-schedule .timetable-small .group-list {
+    margin-bottom: 35px;
+}
+
+.class-schedule .timetable-small h3 {
+    color: $gray-2;
+    font-size: 17px;
+    letter-spacing: 0.4px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.class-schedule .timetable-small ul li {
+    display: block;
+    background: $primary;
+    color: $white;
+    padding: 10px 15px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.class-schedule .timetable-small ul li h4 {
+    font-size: 14px;
+    font-weight: $font-500;
+    letter-spacing: 0.4px;
+    text-align: $text-left;
+    text-transform: capitalize;
+}
+
+.class-schedule .timetable-small ul li span {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 15px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+}
+
+input[type="radio"] {
+    &:checked,
+    &:not(:checked) {
+        position: absolute;
+        left: -9999px;
+    }
+    &:checked+label,
+    &:not(:checked)+label {
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        line-height: 20px;
+        display: inline-block;
+        color: $gray-3;
+        margin-bottom: 0;
+        padding: 8px 20px;
+        border: $border-width $border-style-solid $primary;
+    }
+    &:checked+label:before,
+    &:not(:checked)+label:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background-color: $background-white;
+        z-index: -3;
+        padding: 8px 20px;
+        display: inline-block;
+    }
+    &:checked+label:after,
+    &:not(:checked)+label:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: $primary;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        transition: all 0.2s ease;
+        z-index: -1;
+    }
+    &:not(:checked)+label:after,
+    &:checked+label:after {
+        transition: all 0.2s ease;
+    }
+    &:not(:checked)+label:after {
+        opacity: 0;
+    }
+    &:checked+label:after {
+        opacity: 1;
+    }
+    &:checked+label {
+        color: $white !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    /*=========== Schedule ============*/
+    .class-schedule .filter-menu .list-filter li {
+        width: 100%;
+    }
+    .class-schedule .filter-menu .list-filter .text {
+        width: 100%;
+        display: block;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,47 @@
+.call-to-action {
+    background: $primary;
+    color: $white;
+    padding: 65px 0;
+    position: relative;
+    .flaticon-lotus {
+        &:before {
+            margin-left: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.06;
+            font-size: 15em;
+            z-index: 1;
+        }
+    }
+    .content {
+        position: relative;
+        z-index: 2;
+        h3 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            @include respond("phone") {
+                font-size: 30px;
+            }
+        }
+        p {
+            color: $white-1;
+            font-size: 15px;
+            font-weight: $font-400;
+            margin-bottom: 0;
+        }
+        .main-btn {
+            margin-top: 25px;
+        }
+    }
+}
+
+.main-btn {
+    &:hover {
+        &:before {
+            width: 190%;
+        }
+    }
+}

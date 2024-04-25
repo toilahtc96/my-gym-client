@@ -1,0 +1,226 @@
+/* --------------------------------------
+   11. Events
+-----------------------------------------*/
+
+.events {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $background-white;
+    @include respond("phone-land") {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .event {
+        background-color: $background-color;
+        border: $border;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        .event-img {
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .event-content {
+            position: relative;
+            padding: 20px 10px 20px 80px;
+            .event-title {
+                h4 {
+                    color: $gray-2;
+                    font-size: 19px;
+                    font-weight: $font-600;
+                    letter-spacing: 0.3px;
+                    text-transform: capitalize;
+                    margin-bottom: 10px;
+                    &:hover {
+                        color: $primary;
+                    }
+                    @include respond("phone") {
+                        font-size: 17px;
+                        letter-spacing: 0;
+                    }
+                }
+            }
+            .event-info {
+                li {
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $gray-1;
+                    letter-spacing: 0.4px;
+                    margin-bottom: 10px;
+                    &.time {
+                        margin-right: 15px;
+                    }
+                    i {
+                        display: inline-block;
+                        margin-right: 5px;
+                        &:before {
+                            color: $primary;
+                            font-size: 15px;
+                            margin-left: 0;
+                        }
+                    }
+                    @include respond("phone") {
+                        font-size: 13px;
+                    }
+                }
+            }
+            .event-text {
+                p {
+                    font-size: 15px;
+                    line-height: 1.7;
+                    color: $gray-1;
+                    margin-bottom: 10px;
+                }
+            }
+            .event-more {
+                display: inline-block;
+                color: $primary;
+                font-size: 15px;
+                font-weight: $font-500;
+                letter-spacing: 0.1px;
+                text-transform: capitalize;
+                @include respond("phone") {
+                    font-size: 14px;
+                }
+            }
+            .event-date {
+                position: absolute;
+                top: 22px;
+                left: 0;
+                background-color: $primary;
+                color: $white;
+                border-radius: 0 4px 4px 0;
+                font-size: 16px;
+                font-weight: $font-500;
+                letter-spacing: 0.3px;
+                padding: 15px;
+                line-height: 1;
+                text-align: $text-center;
+                @include respond("phone") {
+                    font-size: 15px;
+                    padding: 12px;
+                }
+                span {
+                    display: block;
+                    line-height: 1;
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+    .my-btn {
+        margin-top: 20px;
+    }
+}
+
+.event-details {
+    .event-content {
+        padding: 20px;
+        .event-date {
+            top: -66px;
+            left: auto;
+            right: 0;
+            border-radius: 4px 0 0 4px;
+        }
+    }
+}
+
+
+/* --------------------------------------
+   Event Details
+-----------------------------------------*/
+
+.events-left {
+    padding-bottom: 70px;
+    @include respond("phone-land") {
+        padding-bottom: 50px;
+    }
+    .event {
+        .event-content {
+            padding: 20px;
+            .event-text {
+                p {
+                    margin-bottom: 0;
+                }
+            }
+            .event-date {
+                top: -66px;
+                left: auto;
+                right: 0;
+                border-radius: 4px 0 0 4px;
+            }
+            .event-comments {
+                padding: 35px 0 0;
+                h3 {
+                    font-size: 21px;
+                    letter-spacing: 0.5px;
+                    text-transform: capitalize;
+                    color: $gray-3;
+                    font-weight: $font-600;
+                    margin-bottom: 35px;
+                }
+            }
+            .event-comment {
+                position: relative;
+                margin-bottom: 35px;
+                .comment-image {
+                    @include respond("phone-land") {
+                        margin-bottom: 15px;
+                    }
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        @include respond("phone-land") {
+                            height: auto;
+                        }
+                    }
+                }
+                h4 {
+                    font-size: 16px;
+                    letter-spacing: 0.5px;
+                    text-transform: capitalize;
+                    color: $gray-3;
+                    font-weight: $font-600;
+                    margin-bottom: 7px;
+                }
+                span {
+                    display: inline-block;
+                    color: $gray-1;
+                    font-size: 15px;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 10px;
+                }
+                .reply-btn {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 16px;
+                    color: $primary;
+                    letter-spacing: 0.4px;
+                    padding: 0;
+                    border: none;
+                    background: transparent;
+                    i {
+                        margin-right: 7px;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 1.8;
+                    color: $gray-1;
+                    margin-bottom: 0;
+                }
+                &.reply {
+                    margin-left: 90px;
+                    @include respond("phone-land") {
+                        margin-left: 65px;
+                    }
+                }
+            }
+        }
+    }
+}

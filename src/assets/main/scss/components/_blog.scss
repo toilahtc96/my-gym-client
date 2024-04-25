@@ -1,0 +1,611 @@
+/* --------------------------------------
+   Blog
+-----------------------------------------*/
+
+.blog {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $background-white;
+    @include respond("phone-land") {
+        padding-bottom: 50px;
+    }
+    @include respond("phone-land") {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .post {
+        background-color: $background-color;
+        border: $border;
+        border-radius: 4px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        .post-img {
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .post-content {
+            padding: 20px 0;
+            position: relative;
+            .post-title {
+                h4 {
+                    color: $gray-3;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 15px;
+                    font-weight: $font-600;
+                    padding: 0 20px;
+                }
+            }
+            .post-text {
+                p {
+                    line-height: 1.8;
+                    font-weight: $font-400;
+                    padding: 0 20px;
+                    margin-bottom: 0;
+                    color: $gray-1;
+                    font-size: 15px;
+                    &:last-of-type {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            .post-info {
+                margin-bottom: 0;
+                padding: 15px 20px 0;
+                overflow: hidden;
+                li {
+                    display: inline-block;
+                    color: $gray-1;
+                    letter-spacing: 0.3px;
+                    font-weight: $font-500;
+                    font-size: 15px;
+                    line-height: 1;
+                    .post-more {
+                        color: $primary;
+                        text-transform: uppercase;
+                        font-weight: $font-600;
+                        font-size: 13px;
+                        i {
+                            margin-left: 4px;
+                        }
+                    }
+                }
+            }
+            .post-date {
+                position: absolute;
+                top: -60px;
+                right: 0px;
+                width: 50px;
+                height: 60px;
+                background: $primary;
+                border: $border-width $border-style-solid $primary;
+                color: $white;
+                border-radius: 4px 0 0 4px;
+                text-align: $text-center;
+                font-size: 15px;
+                font-weight: $font-500;
+                letter-spacing: 0.3px;
+                span {
+                    display: block;
+                    line-height: 1;
+                    margin-top: 12px;
+                }
+            }
+            .post-footer {
+                padding: 35px 20px;
+                h5 {
+                    font-size: 17px;
+                    letter-spacing: 0.5px;
+                    text-transform: capitalize;
+                    color: $gray-3;
+                    font-weight: $font-600;
+                    margin-bottom: 25px;
+                }
+                .post-share {
+                    margin-bottom: 35px;
+                    ul {
+                        li {
+                            display: inline-block;
+                            margin-right: 14px;
+                            a {
+                                display: inline-block;
+                                width: 40px;
+                                height: 40px;
+                                line-height: 43px;
+                                text-align: $text-center;
+                                font-size: 18px;
+                                color: $primary-1;
+                                border-radius: 50%;
+                                background: transparent;
+                                border: $border-width $border-style-solid $primary;
+                                -webkit-transition: color 0s ease-in-out;
+                                -moz-transition: color 0s ease-in-out;
+                                -o-transition: color 0s ease-in-out;
+                                -ms-transition: color 0s ease-in-out;
+                                transition: color 0s ease-in-out;
+                                &:hover {
+                                    color: $white;
+                                    background: $primary-1;
+                                    border: $border-width $border-style-solid $primary;
+                                    -webkit-transition: color 0s ease-in-out;
+                                    -moz-transition: color 0s ease-in-out;
+                                    -o-transition: color 0s ease-in-out;
+                                    -ms-transition: color 0s ease-in-out;
+                                    transition: color 0s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+                .post-tags {
+                    ul {
+                        li {
+                            display: inline-block;
+                            a {
+                                display: inline-block;
+                                color: $gray-1;
+                                font-size: 15px;
+                                letter-spacing: 0.3px;
+                                margin-bottom: 5px;
+                                margin-right: 12px;
+                                &:hover {
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .post-comments {
+                padding: 0 20px 25px;
+                h3 {
+                    font-size: 21px;
+                    letter-spacing: 0.5px;
+                    text-transform: capitalize;
+                    color: $gray-3;
+                    font-weight: $font-600;
+                    margin-bottom: 35px;
+                }
+                .post-comment {
+                    position: relative;
+                    margin-bottom: 35px;
+                    &.reply {
+                        margin-left: 90px;
+                        @include respond("phone-land") {
+                            margin-left: 65px;
+                        }
+                    }
+                    .comment-image {
+                        img {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                            @include respond('phone-land') {
+                                height: auto;
+                            }
+                        }
+                    }
+                    h4 {
+                        font-size: 16px;
+                        letter-spacing: 0.5px;
+                        text-transform: capitalize;
+                        color: $gray-3;
+                        font-weight: $font-600;
+                        margin-bottom: 7px;
+                    }
+                    span {
+                        display: inline-block;
+                        color: $gray-1;
+                        font-size: 15px;
+                        letter-spacing: 0.5px;
+                        margin-bottom: 10px;
+                    }
+                    .reply-btn {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 16px;
+                        color: $primary;
+                        letter-spacing: 0.4px;
+                        padding: 0;
+                        border: none;
+                        background: transparent;
+                        i {
+                            margin-right: 7px;
+                        }
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 1.8;
+                        color: $gray-1;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &:hover {
+                .post-title {
+                    h4 {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        .more-details {
+            padding: 0 20px;
+            p {
+                line-height: 1.8;
+                font-weight: $font-400;
+                margin-bottom: 15px;
+                color: $gray-1;
+                font-size: 15px;
+            }
+            blockquote {
+                position: relative;
+                background-color: $background-white;
+                border: $border-width $border-style-solid #f3f0f0;
+                border-radius: 6px;
+                margin: 0 0 15px;
+                padding: 20px;
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 14px;
+                    -webkit-transform: translateY(-50%);
+                    -moz-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    -o-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    width: 40px;
+                    height: 40px;
+                    line-height: 42px;
+                    font-size: 17px;
+                    border-radius: 50%;
+                    text-align: $text-center;
+                    color: $white;
+                    background: $primary;
+                    border: $border-width $border-style-solid $primary;
+                }
+                p {
+                    margin-bottom: 0;
+                    padding-left: 55px;
+                }
+            }
+        }
+    }
+    .my-btn {
+        text-align: $text-center;
+        margin-top: 20px;
+    }
+}
+
+
+/* --------------------------------------
+   Classes - Class Schedule
+-----------------------------------------*/
+
+
+/* --------------------------------------
+   Classes - Class Grid
+-----------------------------------------*/
+
+.classes {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    background-color: $background-white;
+    .class {
+        background-color: $background-color;
+        border: $border;
+        border-radius: 4px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        .class-content {
+            padding: 20px 0;
+            position: relative;
+            .class-title {
+                h4 {
+                    color: $gray-3;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 5px;
+                    font-weight: $font-600;
+                    padding: 0 20px;
+                    @include respond('phone') {
+                        font-size: 17px !important;
+                    }
+                }
+            }
+            .details {
+                padding: 0 20px;
+                margin-bottom: 10px !important;
+                li {
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $gray-5;
+                    margin-right: 8px;
+                    i {
+                        display: inline-block;
+                        color: $primary;
+                        margin-right: 6px;
+                    }
+                }
+            }
+            .class-text {
+                p {
+                    line-height: 1.8;
+                    font-weight: $font-400;
+                    padding: 0 20px;
+                    margin-bottom: 0;
+                    color: $gray-1;
+                    font-size: 15px;
+                }
+            }
+            .class-info {
+                margin-bottom: 0;
+                padding: 15px 20px 0;
+                overflow: hidden;
+                li {
+                    display: inline-block;
+                    color: $gray-1;
+                    letter-spacing: 0.3px;
+                    font-weight: $font-500;
+                    font-size: 15px;
+                    line-height: 1;
+                    .post-more {
+                        color: $primary;
+                        text-transform: uppercase;
+                        font-weight: $font-600;
+                        font-size: 13px;
+                        i {
+                            margin-left: 4px;
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .class-title {
+                    h4 {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.classes {
+    .class-sidebar {
+        .register {
+            margin-bottom: 30px;
+            display: block;
+            margin-right: 0;
+        }
+    }
+}
+
+
+/* --------------------------------------
+   Classes - Class Grid
+-----------------------------------------*/
+
+.class-details {
+    .class {
+        background-color: $background-color;
+        border: $border;
+        border-radius: 4px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        .class-img {
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .class-content {
+            padding: 20px 0;
+            position: relative;
+            &:hover {
+                .class-title {
+                    h4 {
+                        color: $primary;
+                    }
+                }
+            }
+            .class-title {
+                h4 {
+                    color: $gray-3;
+                    letter-spacing: 0.5px;
+                    margin-bottom: 5px;
+                    font-weight: $font-600;
+                    padding: 0 20px;
+                    @include respond('phone') {
+                        font-size: 17px !important;
+                    }
+                }
+            }
+            .details {
+                padding: 0 20px;
+                margin-bottom: 10px !important;
+                li {
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $gray-5;
+                    margin-right: 8px;
+                    i {
+                        display: inline-block;
+                        color: $primary;
+                        margin-right: 6px;
+                    }
+                }
+            }
+            .class-text {
+                p {
+                    line-height: 1.8;
+                    font-weight: $font-400;
+                    padding: 0 20px;
+                    margin-bottom: 0;
+                    color: $gray-1;
+                    font-size: 15px;
+                }
+            }
+            .class-footer {
+                padding: 35px 20px;
+                .class-share {
+                    margin-bottom: 35px;
+                    h5 {
+                        font-size: 17px;
+                        letter-spacing: 0.5px;
+                        text-transform: capitalize;
+                        color: $gray-3;
+                        font-weight: $font-600;
+                        margin-bottom: 25px;
+                    }
+                    ul {
+                        li {
+                            display: inline-block;
+                            margin-right: 14px;
+                            a {
+                                display: inline-block;
+                                width: 40px;
+                                height: 40px;
+                                line-height: 43px;
+                                text-align: $text-center;
+                                font-size: 18px;
+                                color: $primary-1;
+                                border-radius: 50%;
+                                background: transparent;
+                                border: $border-width $border-style-solid $primary;
+                                -webkit-transition: color 0s ease-in-out;
+                                -moz-transition: color 0s ease-in-out;
+                                -o-transition: color 0s ease-in-out;
+                                -ms-transition: color 0s ease-in-out;
+                                transition: color 0s ease-in-out;
+                                &:hover {
+                                    color: $white;
+                                    background: $primary-1;
+                                    border: $border-width $border-style-solid $primary;
+                                    -webkit-transition: color 0s ease-in-out;
+                                    -moz-transition: color 0s ease-in-out;
+                                    -o-transition: color 0s ease-in-out;
+                                    -ms-transition: color 0s ease-in-out;
+                                    transition: color 0s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+                .class-tags {
+                    h5 {
+                        font-size: 17px;
+                        letter-spacing: 0.5px;
+                        text-transform: capitalize;
+                        color: $gray-3;
+                        font-weight: $font-600;
+                        margin-bottom: 25px;
+                    }
+                    ul {
+                        li {
+                            display: inline-block;
+                            a {
+                                display: inline-block;
+                                color: $gray-1;
+                                font-size: 15px;
+                                letter-spacing: 0.3px;
+                                margin-bottom: 5px;
+                                margin-right: 12px;
+                                &:hover {
+                                    color: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .class-comments {
+                padding: 0 20px 25px;
+                h3 {
+                    font-size: 21px;
+                    letter-spacing: 0.5px;
+                    text-transform: capitalize;
+                    color: $gray-3;
+                    font-weight: $font-600;
+                    margin-bottom: 35px;
+                }
+                .class-comment {
+                    position: relative;
+                    margin-bottom: 35px;
+                    .comment-image {
+                        @include respond("phone-land") {
+                            margin-bottom: 15px;
+                        }
+                        img {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                            @include respond('phone-land') {
+                                height: auto;
+                            }
+                        }
+                    }
+                    &.reply {
+                        margin-left: 90px;
+                        @include respond("phone-land") {
+                            margin-left: 65px;
+                        }
+                    }
+                    h4 {
+                        font-size: 16px;
+                        letter-spacing: 0.5px;
+                        text-transform: capitalize;
+                        color: $gray-3;
+                        font-weight: $font-600;
+                        margin-bottom: 7px;
+                    }
+                    span {
+                        display: inline-block;
+                        color: $gray-1;
+                        font-size: 15px;
+                        letter-spacing: 0.5px;
+                        margin-bottom: 10px;
+                    }
+                    .reply-btn {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 16px;
+                        color: $primary;
+                        letter-spacing: 0.4px;
+                        padding: 0;
+                        border: none;
+                        background: transparent;
+                        i {
+                            margin-right: 7px;
+                        }
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 1.8;
+                        color: $gray-1;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pull-right {
+    float: $float-right;
+}
+
+.pull-left {
+    float: $float-left;
+}
+
+.blog .post .post-content .more-details .image,
+.blog .post .post-content .post-comment .comment-image {
+    @include respond("phone-land") {
+        margin-bottom: 15px;
+    }
+}

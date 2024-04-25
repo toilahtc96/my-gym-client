@@ -1,0 +1,135 @@
+/* --------------------------------------
+   17. Newsletter
+-----------------------------------------*/
+
+.newsletter {
+    background-color: $background-color;
+    .newsletter-inner {
+        background: $primary;
+        padding: 60px 40px;
+        border-radius: 7px;
+        position: relative;
+        z-index: 3;
+        margin-bottom: -100px;
+
+        @include respond("phone-land") {
+            margin-bottom: -80px;
+        }
+        @include respond("phone") {
+            padding: 40px 25px;
+        }
+        h2 {
+            font-size: 26px;
+            font-weight: $font-600;
+            letter-spacing: 0.2px;
+            color: $white;
+            margin-bottom: 8px;
+            @include respond("phone") {
+                font-size: 20px;
+            }
+        }
+        p {
+            font-size: 15px;
+            color: $white-1;
+            margin: 0;
+            @include respond("phone") {
+                font-size: 14px;
+            }
+        }
+        .form-group {
+            margin: 0;
+            margin-top: 4px;
+            overflow: hidden;
+            @include respond("large-devices") {
+                position: relative;
+                margin-top: 0;
+            }
+            @include respond("medium-devices") {
+                margin-top: 20px;
+            }
+            @include respond("phone-land") {
+                position: relative;
+                margin-top: 20px;
+            }
+            .form-control {
+                float: $float-left;
+                width: 70%;
+                margin-right: 3%;
+                color: $gray-6;
+                outline: none;
+                border: none;
+                border-radius: 4px;
+                height: 50px;
+                padding: 12px 30px;
+                background-color: $background-color;
+                @include respond("large-devices") {
+                    float: none;
+                    width: 100%;
+                    margin-right: 0;
+                    border-radius: 4px;
+                    height: 60px;
+                }
+                @include respond("phone-land") {
+                    float: none;
+                    width: 100%;
+                    margin-right: 0;
+                    border-radius: 4px;
+                    height: 60px;
+                }
+                @include respond("phone") {
+                    height: 50px;
+                }
+            }
+        }
+        .main-btn {
+            float: $float-left;
+            width: 27%;
+            min-width: 155px;
+            margin: 0;
+            border-color: #fff;
+            padding: 13px 20px;
+            height: 50px;
+            @include respond("large-devices") {
+                float: none;
+                width: auto;
+                position: absolute;
+                top: 50%;
+                right: 2.5px;
+                transform: translateY(-50%);
+                margin: 0;
+                border-color: $primary;
+                height: 55px;
+            }
+            @include respond("phone-land") {
+                float: none;
+                width: auto;
+                position: absolute;
+                top: 50%;
+                right: 2.5px;
+                transform: translateY(-50%);
+                margin: 0;
+                border-color: #7b6cd5;
+                height: 55px;
+            }
+            @include respond("phone") {
+                position: static;
+                -webkit-transform: translateY(0);
+                -moz-transform: translateY(0);
+                -o-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0);
+                min-width: 140px;
+                margin-top: 20px;
+                border-color: #fff;
+                height: 50px;
+            }
+            &:hover {
+                border-color: $primary-2;
+            }
+        }
+    }
+}
+
+.area {
+    background-color: $background-white !important;
+}

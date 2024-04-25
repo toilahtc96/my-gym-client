@@ -1,0 +1,68 @@
+.faq {
+    background-color: #f7f6f6;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include respond("phone-land") {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .card {
+        border: none;
+        margin-bottom: 15px !important;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+        border-radius: 0;
+        .card-header {
+            padding: 0;
+            h5 {
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 0;
+                .btn-link {
+                    position: relative;
+                    padding: 20px 40px 20px 20px;
+                    display: block;
+                    text-decoration: none;
+                    background-color: #7b6cd5;
+                    color: #fff;
+                    font-size: 17px;
+                    line-height: 1.1;
+                    border: none;
+                    border-radius: 0;
+                    width: 100%;
+                    text-align: left;
+                    white-space: initial;
+                    box-shadow: none;
+                    &:after {
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f107";
+
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        font-size: inherit;
+                        color: #fff;
+                    }
+                    &[aria-expanded="true"]:after {
+                        content: "\f106";
+                    }
+                    @include respond("phone-land") {
+                        font-size: 16px;
+                    }
+                    @include respond("phone") {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .card-body {
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0;
+            color: #888;
+            padding: 20px;
+            @include respond("phone") {
+                font-size: 14px;
+            }
+        }
+    }
+}

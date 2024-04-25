@@ -1,0 +1,132 @@
+/************************** 
+* Main Color
+***************************/
+
+$primary: #7b6cd5;
+$primary-1: #7a6bd4;
+$primary-2: #604dd6;
+$success: #37983b;
+$danger: #f54033;
+$black: #000000;
+$gray-1: #888;
+$gray-2: #323232;
+$gray-3: #666;
+$gray-4:#3e3e3e;
+$gray-5:#999;
+$gray-6: #777;
+$gray-8: #eee;
+$gray-9: #e0dede;
+$gray-10: #585353;
+$gray-11: #353535;
+$gray-12: #8e8d8d;
+$white-1 : #f1f3f1;
+$white-2: #f7f5f5;
+$white-3: #e0dede;
+$white-4: #dcdbdb;
+
+
+
+
+/************************** 
+* Main Color
+***************************/
+
+$background-color: #f7f6f6;
+$background-white: #ffffff;
+$background-dark-1: #333;
+
+/************************** 
+* Main Color
+***************************/
+
+$white: #ffffff;
+
+/************************** 
+* Border
+***************************/
+
+$border: 1px solid #e8e5f5;
+$border-width: 1px;
+$border-width-2: 2px;
+$border-width-3: 3px;
+$border-color: #ecf3fa;
+$border-color-withe: #ffffff;
+$border-radius-3: 5px;
+$border-radius-5: 5px;
+$border-style-solid: solid;
+$btn-border-width: 1px;
+
+
+/************************** 
+* Main Fonts
+***************************/
+
+$font-Poppins: "Poppins", sans-serif;
+$font-rubik: "Rubik", sans-serif;
+
+/************************** 
+* Float fixing
+***************************/
+
+$float-left: left;
+$float-right: right;
+
+/************************** 
+* Text Align
+***************************/
+
+$text-left: left;
+$text-center: center;
+$text-right: right;
+
+/************************** 
+* Font-weight
+***************************/
+
+$font-100: 100;
+$font-200: 200;
+$font-300: 300;
+$font-400: 400;
+$font-500: 500;
+$font-600: 600;
+$font-700: 700;
+$font-800: 800;
+
+/************************** 
+* Transition
+***************************/
+
+.transition {
+    -webkit-transition: all 0.5s ease-in-out !important;
+    -o-transition: all 0.5s ease-in-out !important;
+    transition: all 0.5s ease-in-out !important;
+}
+
+
+/************************** 
+* Box Shadow
+***************************/
+
+
+/************************** 
+* Box Sizing
+***************************/
+
+.box-sizing {
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/************************** 
+* Transition Transforme
+***************************/
+
+.transTransforme {
+    -webkit-transition: transform 330ms ease-out;
+    -moz-transition: transform 330ms ease-out;
+    -o-transition: transform 330ms ease-out;
+    transition: transform 330ms ease-out;
+}

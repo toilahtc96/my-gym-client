@@ -1,0 +1,47 @@
+.upper-bar {
+    background-color: $background-white;
+    .container {
+        @include respond("phone") {
+            padding: 0;
+        }
+    }
+    .inner-bar {
+        background-color: $primary;
+        color: $white-1;
+        padding: 10px 15px;
+        border-radius: 0 0 8px 8px;
+        @include respond("phone") {
+            border-radius: 0;
+        }
+        .contact-bar {
+            li {
+                display: inline-block;
+                font-size: 14px;
+                margin-right: 15px;
+                a {
+                    color: $white-1;
+                }
+                i,
+                svg {
+                    margin-right: 5px;
+                }
+            }
+        }
+        .social-media-bar {
+            @include respond("medium-devices") {
+                margin-top: 5px;
+            }
+            @include respond("phone-land") {
+                display: none;
+            }
+            li {
+                display: inline-block;
+                font-size: 14px;
+                margin-right: 15px;
+                a {
+                    color: $white-1;
+                }
+            }
+        }
+    }
+}

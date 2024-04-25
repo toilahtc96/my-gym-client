@@ -1,0 +1,294 @@
+/* --------------------------------------
+   Home - 1
+-----------------------------------------*/
+
+.home {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 124px);
+    background: #eee;
+    .owl-carousel {
+        &.owl-loaded {
+            height: 100%;
+        }
+        .owl-stage-outer {
+            height: 100%;
+            .owl-stage {
+                height: 100%;
+            }
+        }
+        .owl-item {
+            height: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .bg-cover {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100%;
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .home-content {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h5 {
+            color: $primary;
+            font-size: 22px;
+            font-weight: $font-600;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+            @include respond("phone-land") {
+                font-size: 21px;
+                color: #ffffff;
+            }
+            @include respond("phone") {
+                font-size: 18px;
+                color: #ffffff;
+            }
+            &.fix-title {
+                @include respond("phone-land") {
+                    color: #7b6cd5;
+                }
+                @include respond("phone") {
+                    color: #7b6cd5;
+                }
+            }
+        }
+        h1 {
+            color: $white-3;
+            font-size: 65px;
+            font-weight: $font-700;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            @include respond("phone-land") {
+                font-size: 58px;
+            }
+            @include respond("phone") {
+                font-size: 45px;
+            }
+        }
+        p {
+            color: $white;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+            margin-bottom: 30px;
+            @include respond("phone") {
+                font-size: 15px;
+            }
+        }
+        .custom-btn {
+            margin-right: 14px;
+            @include respond("phone") {
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+.home .owl-carousel .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.home {
+    .owl-carousel {
+        .owl-nav {
+            @include respond("a-kindle") {
+                display: none;
+            }
+            .owl-next,
+            .owl-prev {
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+                font-size: 24px;
+                color: $white;
+                width: 45px;
+                height: 45px;
+                line-height: 36px;
+                text-align: $text-center;
+                background-color: rgba(23, 24, 25, 0.5);
+                border-radius: 3px;
+                outline: none;
+                z-index: 999;
+            }
+            .owl-next {
+                right: 10px;
+            }
+            .owl-prev {
+                left: 10px;
+            }
+        }
+    }
+}
+
+.home .owl-carousel .owl-nav .owl-next:hover,
+.home .owl-carousel .owl-nav .owl-prev:hover {
+    background-color: $primary;
+}
+
+.owl-item {}
+
+
+/* --------------------------------------
+   Home Demo2
+-----------------------------------------*/
+
+.home {
+    &.demo2 {
+        .home-content {
+            h5,
+            p {
+                color: $white-2;
+                text-align: $text-left;
+            }
+            h1 {
+                color: $white;
+                text-align: $text-left;
+            }
+            .my-btn {
+                text-align: $text-left;
+            }
+        }
+        .home-image {
+            margin-top: -85px;
+            img {
+                width: 100%;
+            }
+            @include respond("large-devices") {
+                margin-left: -52px;
+            }
+            @include respond("medium-devices") {
+                margin-left: -20px;
+            }
+        }
+    }
+}
+
+.header-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .home-content {
+        h5,
+        h1,
+        p,
+        .my-btn {
+            @include respond("phone-land") {
+                text-align: center !important;
+            }
+        }
+    }
+    .home-image {
+        @include respond("phone-land") {
+            display: none;
+        }
+    }
+}
+
+
+/* --------------------------------------
+   Home Demo3
+-----------------------------------------*/
+
+.home {
+    &.demo3 {
+        background: #fde2ce;
+        .home-content {
+            h5,
+            .my-btn {
+                text-align: $text-left;
+            }
+            p,
+            h1 {
+                color: $gray-2;
+                text-align: $text-left;
+            }
+            .custom-btn {
+                background-color: $background-white;
+                color: $primary;
+                border: $border-width-2 $border-style-solid $white;
+                transition-duration: 0.1s;
+                &:hover {
+                    color: $white;
+                    border: $border-width-2 $border-style-solid $primary-2;
+                }
+            }
+        }
+        .home-image {
+            // margin-top: 60px;
+            @include respond("large-devices") {
+                margin-top: 100px;
+            }
+            @include respond("medium-devices") {
+                margin-top: 100px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Arrows
+.owl-theme {
+    .owl-nav {
+        .owl-prev,
+        .owl-next {
+            font-size: 0 !important;
+            &:before {
+                content: "";
+                transform: rotate(45deg) !important;
+                font-size: 30px;
+                color: $white;
+                font: normal normal normal 14px/1 FontAwesome;
+                width: 12px;
+                height: 12px;
+                border: $border-width-2 $border-style-solid #fff;
+                top: 38%;
+                left: 20px;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .owl-prev {
+            &:before {
+                border-top: transparent;
+                border-right: transparent;
+                left: 20px;
+            }
+        }
+        .owl-next {
+            &:before {
+                border-left: transparent;
+                border-bottom: transparent;
+                left: 13px;
+            }
+        }
+    }
+}

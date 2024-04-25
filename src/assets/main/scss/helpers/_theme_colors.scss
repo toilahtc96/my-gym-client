@@ -1,0 +1,329 @@
+
+.landing-gradient-color .main-title .separator:before,	
+.landing-gradient-color .main-title .separator:after,
+.landing-gradient-color .upper-bar .inner-bar,
+.landing-gradient-color .header-inner .menu-toggle,
+.landing-gradient-color .header-inner .search-form .search-btn,
+.landing-gradient-color .header-inner .navbar .nav li a:before,
+.landing-gradient-color .side-menu .social-icons li a:hover,
+.landing-gradient-color .home.demo2,
+.landing-gradient-color .services .service .service-bg,
+.landing-gradient-color .about-us .about-info .progress-container .progress-bar,
+.landing-gradient-color .class-schedule .filter-menu .list-filter li.active,
+.landing-gradient-color .class-schedule .timetable-small ul li,
+.landing-gradient-color .call-to-action,
+.landing-gradient-color .events .event .event-content .event-date,
+.landing-gradient-color .team .member .member-img .social-media i,
+.landing-gradient-color .pricing .pricing-plans .pricing-plan.two .pricing-head,
+.landing-gradient-color .testimonials .owl-carousel .owl-nav .owl-next:hover,
+.landing-gradient-color .testimonials .owl-carousel .owl-nav .owl-prev:hover,
+.landing-gradient-color .contact .contact-form .form-group .input-border,
+.landing-gradient-color .newsletter .newsletter-inner {
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+}
+
+.landing-gradient-color .main-title .separator .flaticon-chakra:before,
+.landing-gradient-color .custom-btn span,
+.landing-gradient-color .header-inner .my-logo .flaticon-chakra:before,
+.landing-gradient-color .header-inner .nav-search li a:hover,
+.landing-gradient-color .header-inner .navbar .nav li.active a,
+.landing-gradient-color .header-inner .navbar .nav li.active a i,
+.landing-gradient-color .header-inner .navbar .nav li:hover a,
+.landing-gradient-color .header-inner .navbar .nav li:hover a i,
+.landing-gradient-color .side-menu .side-menu-close i,
+.landing-gradient-color .side-menu .my-logo .flaticon-chakra:before,
+.landing-gradient-color .side-menu .side-nav li a:hover,
+.landing-gradient-color .side-menu .side-nav li a.active,
+.landing-gradient-color .side-menu .social-icons li a i,
+.landing-gradient-color .about-us .about-info h3,
+.landing-gradient-color .class-schedule .timetable tr td h4,
+.landing-gradient-color .events .event .event-content .event-title h4:hover,
+.landing-gradient-color .events .event .event-content .event-info li i:before,
+.landing-gradient-color .events .event .event-content .event-more,
+.landing-gradient-color .team .member .member-info span,
+.landing-gradient-color .pricing .pricing-plans .pricing-plan .pricing-price p,
+.landing-gradient-color .pricing .pricing-plans .pricing-plan .main-btn span,
+.landing-gradient-color .testimonials .testimonial-box .description .star i,
+.landing-gradient-color .blog .post .post-content:hover .post-title h4,
+.landing-gradient-color .blog .post .post-content .post-info li .post-more,
+.landing-gradient-color .blog .post .post-content .post-info li .post-more i,
+.landing-gradient-color .contact .contact-form .form-group .form-control:focus ~ label,
+.landing-gradient-color .newsletter .newsletter-inner .main-btn span,
+.landing-gradient-color .footer .footer-top .footer-logo .my-logo .flaticon-chakra:before,
+.landing-gradient-color .footer .footer-bottom .copyright p span {	
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.landing-gradient-color .main-btn {
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+    border: none;
+	box-shadow: 0 2px 4px rgba(4, 6, 6, .15);
+}
+
+.landing-gradient-color .main-btn:before,
+.landing-gradient-color .header-inner .search-form .search-btn:hover,
+.landing-gradient-color .team .member .member-img .social-media i:hover {
+    background: linear-gradient(45deg, #cf11da 0%, #3482fd 100%);
+}
+
+.landing-gradient-color .main-btn:hover,
+.landing-gradient-color .custom-btn:hover {
+	border: none;
+	box-shadow: 0 3px 25px rgba(4, 6, 6, .25);
+}
+
+.landing-gradient-color .custom-btn {
+    background: #fff;
+    border: none;
+}
+
+.landing-gradient-color .custom-btn:hover span,
+.landing-gradient-color .side-menu .side-menu-close:hover i,
+.landing-gradient-color .side-menu .social-icons li a:hover i,
+.landing-gradient-color .pricing .pricing-plans .pricing-plan.two .main-btn span,
+.landing-gradient-color .newsletter .newsletter-inner .main-btn:hover span,
+.landing-gradient-color .pricing .pricing-plans .pricing-plan .main-btn:hover span {
+    color: #fff;
+}
+
+.landing-gradient-color .header-inner .search-form {
+    border-top: 2px solid #3482fd;
+}
+
+.landing-gradient-color .header-inner .navbar .nav .dropdown {
+	border-bottom: 3px solid #3482fd;
+}
+
+.landing-gradient-color .side-menu .side-menu-close,
+.landing-gradient-color .side-menu .social-icons li a {
+    border: 1px solid #3482fd;
+}
+
+.landing-gradient-color .side-menu .side-menu-close:hover {
+ 	background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+    border: 1px solid #3482fd;
+}
+
+.landing-gradient-color .services .service .service-icon i {
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+    -webkit-box-shadow: 0 0 0 0 rgba(207, 17, 218, .3);
+            box-shadow: 0 0 0 0 rgba(207, 17, 218, .3);
+}
+
+@-webkit-keyframes pulse
+{
+    to
+    {
+        -webkit-box-shadow: 0 0 0 9px rgba(207, 17, 218, 0);
+                box-shadow: 0 0 0 9px rgba(207, 17, 218, 0);
+    }
+}
+
+@keyframes pulse
+{
+    to
+    {
+        -webkit-box-shadow: 0 0 0 9px rgba(207, 17, 218, 0);
+                box-shadow: 0 0 0 9px rgba(207, 17, 218, 0);
+    }
+}
+
+.landing-gradient-color .services .service .service-bg .flaticon-lotus:before {
+    opacity: .08;
+}
+
+.landing-gradient-color .about-us .about-info .progress-container .percent,
+.landing-gradient-color .class-schedule .filter-menu .list-filter li {
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    border: 1px solid #3482fd;
+}
+
+.landing-gradient-color .about-us .about-info .progress-container .percent:before {
+	border: 1px solid #3482fd;
+	border-width: 0 1px 1px 0;
+}
+
+.landing-gradient-color .about-us .about-image .about-bg .flaticon-lotus:before,
+.landing-gradient-color .contact .flaticon-lotus:before {
+    color: #7b6cd5;
+}
+
+.landing-gradient-color .call-to-action .flaticon-lotus:before {
+    opacity: .05;
+}
+
+.landing-gradient-color .pricing .pricing-plans .pricing-plan .pricing-head .flaticon-lotus:before {
+    opacity: .06;
+}
+
+.landing-gradient-color .pricing .pricing-plans .pricing-plan .main-btn {
+    background: #fff;
+    border: none;
+}
+
+.landing-gradient-color .pricing .pricing-plans .pricing-plan.two .main-btn {
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+	color: #fff;
+}
+
+.landing-gradient-color .blog .post .post-content .post-date {
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+    border: none;
+}
+
+.landing-gradient-color .contact .contact-form .form-group .form-control {
+    border-bottom: 1px solid #bcb4ef;
+}
+
+.landing-gradient-color .newsletter .newsletter-inner .main-btn {
+    background: #fff;
+	border: none;
+}
+
+.landing-gradient-color .newsletter .newsletter-inner .main-btn:hover {
+	border: none;
+}
+
+.landing-gradient-color .footer .footer-top .social-media li i {
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+    color: #fff;
+    border: none;
+	line-height: 38px;
+}
+
+.landing-gradient-color .footer .footer-top .social-media li i:hover,
+.landing-gradient-color .scroll-top:before {
+	background: linear-gradient(45deg, #cf11da 0%, #3482fd 100%);
+    border: none;
+}
+
+.landing-gradient-color .footer .footer-top .footer-item ul li a:hover {
+    color: #e0dede;
+}
+
+.landing-gradient-color .scroll-top,
+.landing-gradient-color .scroll-top:hover {
+	background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+	border: none;
+	line-height: 52px;
+}
+
+.landing-gradient-color .faq .card .card-header h5 .btn-link,
+.landing-gradient-color .contact .contact-boxes .contact-box {
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+}
+
+.landing-gradient-color .classes .class .class-content:hover .class-title h4,
+.landing-gradient-color .classes .class .class-content .details li i,
+.landing-gradient-color .classes .class .class-content .class-info li .post-more,
+.landing-gradient-color .classes .class .class-content .class-footer .class-tags ul li a:hover,
+.landing-gradient-color .classes .class .class-content .class-comment .reply-btn,
+.landing-gradient-color .classes .class .class-content .class-comment .reply-btn i,
+.landing-gradient-color .classes .class-sidebar .info-list li span,
+.landing-gradient-color .classes .class-sidebar .sidebar-classes .class-info h5 a:hover,
+.landing-gradient-color .classes .class-sidebar .tags-list li a:hover,
+.landing-gradient-color .team-single .trainer-info .view-classes,
+.landing-gradient-color .team-single .trainer-info .view-classes i,
+.landing-gradient-color .team-single .related-trainers .member .member-info span,
+.landing-gradient-color .events .event .event-content .event-comment .reply-btn,
+.landing-gradient-color .events .event .event-content .event-comment .reply-btn i,
+.landing-gradient-color .events .event-sidebar .info-list li span,
+.landing-gradient-color .events .event-sidebar .sidebar-events .event-info h5 a:hover,
+.landing-gradient-color .events .event-sidebar .tags-list li a:hover,
+.landing-gradient-color .blog .blog-sidebar .categories-list li a span,
+.landing-gradient-color .blog .blog-sidebar .categories-list li a:hover,
+.landing-gradient-color .blog .blog-sidebar .sidebar-posts .post-info h5 a:hover,
+.landing-gradient-color .blog .blog-sidebar .archives-list li a:hover,
+.landing-gradient-color .blog .blog-sidebar .tags-list li a:hover,
+.landing-gradient-color .blog .post .post-content .post-footer .post-tags ul li a:hover,
+.landing-gradient-color .blog .post .post-content .post-comment .reply-btn,
+.landing-gradient-color .blog .post .post-content .post-comment .reply-btn i {
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.landing-gradient-color .classes .class .class-content .class-footer .class-share ul li a,
+.landing-gradient-color .blog .post .post-content .post-footer .post-share ul li a {
+    background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+	color: #fff;
+    border: none;
+	line-height: 42px;
+}
+
+.landing-gradient-color .classes .class-sidebar .sidebar-search .search-btn,
+.landing-gradient-color .team-single .trainer-info .info > li .social li a,
+.landing-gradient-color .team-single .related-trainers .member .member-img .social-media i,
+.landing-gradient-color .events .event-sidebar .sidebar-search .search-btn,
+.landing-gradient-color .blog .blog-sidebar .sidebar-search .search-btn {
+	background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+	color: #fff;
+    border: none;
+}
+
+.landing-gradient-color .classes .class .class-content .class-footer .class-share ul li a:hover,
+.landing-gradient-color .classes .class-sidebar .sidebar-search .search-btn:hover,
+.landing-gradient-color .team-single .trainer-info .info > li .social li a:hover,
+.landing-gradient-color .team-single .related-trainers .member .member-img .social-media i:hover,
+.landing-gradient-color .events .event-sidebar .sidebar-search .search-btn:hover,
+.landing-gradient-color .blog .blog-sidebar .sidebar-search .search-btn:hover,
+.landing-gradient-color .blog .post .post-content .post-footer .post-share ul li a:hover {
+	background: linear-gradient(45deg, #cf11da 0%, #3482fd 100%);
+    border: none;
+}
+
+.landing-gradient-color .blog .post .post-content .more-details blockquote i {
+	background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+    border: none;
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+	.landing-gradient-color .newsletter .newsletter-inner .main-btn {
+        background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+		color: #fff;
+        border: none;
+    }
+	
+	.landing-gradient-color .newsletter .newsletter-inner .main-btn span {
+		color: #fff;
+    }
+}
+
+/* Small Devices */
+@media (max-width: 767.98px) {
+	
+	.landing-gradient-color .newsletter .newsletter-inner .main-btn {
+        background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+		color: #fff;
+        border: none;
+    }
+	
+	.landing-gradient-color .newsletter .newsletter-inner .main-btn span {
+		color: #fff;
+    }
+
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .landing-gradient-color .newsletter .newsletter-inner .main-btn {
+        background: #fff;
+	    border: none;
+    }
+
+    .landing-gradient-color .newsletter .newsletter-inner .main-btn span {
+        background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .landing-gradient-color .newsletter .newsletter-inner .main-btn:hover span {
+        color: #fff;
+    }
+}

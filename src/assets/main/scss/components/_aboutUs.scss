@@ -1,0 +1,210 @@
+/* --------------------------------------
+   About Us
+-----------------------------------------*/
+
+.about-us {
+    background-color: $background-color;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+    @include respond("phone-land") {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .about-info {
+        h3 {
+            font-size: 17px;
+            letter-spacing: 0.4px;
+            color: $primary;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            @include respond("phone") {
+                font-size: 16px;
+            }
+        }
+        h4 {
+            font-size: 25px;
+            color: $gray-2;
+            font-weight: $font-600;
+            line-height: 1.3;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            @include respond("phone") {
+                font-size: 21px;
+            }
+        }
+        p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: $gray-1;
+            margin-bottom: 25px;
+            &:first-of-type {
+                margin-bottom: 10px;
+            }
+        }
+        .progress-container {
+            position: relative;
+            margin-bottom: 30px;
+            .percent {
+                position: absolute;
+                top: -12px;
+                width: 42px;
+                height: 29px;
+                line-height: 29px;
+                text-align: $text-center;
+                background-color: transparent;
+                color: $primary;
+                font-size: 14px;
+                font-weight: $font-600;
+                border: $border-width $border-style-solid $primary;
+                border-radius: 3px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    left: 50%;
+                    background-color: $background-color;
+                    padding: 4px;
+                    display: block;
+                    border: $border-width $border-style-solid $primary;
+                    border-width: 0 1px 1px 0;
+                    transform: translateX(-50%) rotate(45deg);
+                }
+
+                @include respond("phone") {
+                    font-size: 13px;
+                }
+            }
+            h4 {
+                color: $gray-2;
+                font-size: 15px;
+                font-weight: $font-600;
+                letter-spacing: 0.3px;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                @include respond("phone") {
+                    font-size: 14px;
+                }
+            }
+            .progress {
+                height: 1px;
+                background: #e8e6f2;
+            }
+            .progress-bar {
+                width: 0;
+                background: $primary;
+            }
+        }
+    }
+    .about-image {
+        position: relative;
+
+        @include respond("medium-devices") {
+            margin-bottom: 45px;
+        }
+
+        @include respond("phone-land") {
+            margin-bottom: 45px;
+        }
+        
+        .about-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            .flaticon-lotus {
+                &:before {
+                    margin-left: 0;
+                    position: absolute;
+                    top: -42%;
+                    right: 0;
+                    font-size: 40em;
+                    width: 96%;
+                    height: 50%;
+                    color: $primary;
+                    opacity: 0.075;
+                    @include respond("large-devices") {
+                        top: -50%;
+                        font-size: 35em;
+                        width: 99%;
+                    }
+
+                    @include respond("medium-devices") {
+                        top: -31%;
+                        font-size: 44em;
+                        width: 96%;
+                        height: 65%;
+                    }
+                    @include respond("phone-land") {
+                        top: -220px;
+                        font-size: 39em;
+                        width: 101%;
+                        height: 4%;
+                    }
+                    @include respond("phone") {
+                        top: -207px;
+                        font-size: 36em;
+                        width: 103%;
+                        height: 0%;
+                    }
+                }
+            }
+        }
+        img {
+            position: relative;
+            display: block;
+            max-width: 100%;
+            height: auto;
+            z-index: 2;
+        }
+    }
+    .info {
+
+        @include respond("medium-devices") {
+            order: 1;
+        }
+      
+        @include respond("phone-land") {
+            order: 1;
+        }
+    }
+    .image{
+        @include respond("medium-devices") {
+            order: 0;
+        }
+        @include respond("phone-land") {
+            order: 0;
+        }
+    }
+}
+
+.progress-container {
+    .progress-bar {
+        background-color: $primary;
+    }
+    &:first-child {
+        .progress {
+            .progress-bar {
+                width: 90%;
+            }
+        }
+    }
+    &:nth-child(02) {
+        .progress {
+            .progress-bar {
+                width: 85%;
+            }
+        }
+    }
+    &:nth-child(03) {
+        .progress {
+            .progress-bar {
+                width: 70%;
+            }
+        }
+    }
+}

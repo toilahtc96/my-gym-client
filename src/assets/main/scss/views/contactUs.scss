@@ -1,0 +1,50 @@
+.contact {
+    .contact-boxes {
+          margin-bottom: 30px;
+      .contact-box {
+        padding: 20px;
+        background: rgba(123, 108, 213, 0.9);
+        text-align: $text-center;
+        color: $white-1;
+        border-radius: 6px;
+        margin-bottom: 30px;
+        position: relative;
+        .icon-box {
+          font-size: 35px;
+        }
+        &.two {
+          .flaticon-lotus {
+            &:before {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 146px;
+              color: $white;
+              opacity: 0.04;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      .content-box {
+        h5 {
+          font-size: 16px;
+          margin: 15px 0 5px;
+        }
+        p {
+          font-size: 14px;
+        }
+        
+      }
+    }
+  }
+  
+  .contact {
+    .flaticon-lotus {
+      &:before {
+        top: 55%;
+      }
+    }
+  }
+  

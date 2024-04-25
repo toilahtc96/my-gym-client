@@ -1,0 +1,17 @@
+/************************** 
+* library files
+***************************/
+/* @import url("../../../../node_modules/bootstrap/dist/css/bootstrap.css"); */
+
+/************************** 
+* Fonts Icon
+***************************/
+@import url("../../fonts/flaticon.css");
+@import url("../../fonts/fontawesome/css/all.min.css");
+
+/************************** 
+* Import fonts
+***************************/
+
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800");

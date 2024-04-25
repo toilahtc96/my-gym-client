@@ -1,0 +1,37 @@
+/************************** 
+* components
+***************************/
+@import "components/upperBar";
+@import "components/header";
+@import "components/headerInner";
+@import "components/services";
+@import "components/aboutUs";
+@import "components/classSchedule";
+@import "components/callToAction";
+@import "components/events";
+@import "components/team";
+@import "components/pricing";
+@import "components/testimonials";
+@import "components/blog";
+@import "components/contact";
+@import "components/newsletter";
+@import "layouts/footer.scss";
+
+/************************** 
+*   layouts
+***************************/
+@import "layouts/headerV1.scss";
+@import "layouts/headerV2.scss";
+@import "layouts/headerV2.scss";
+@import "layouts/footer.scss";
+
+/************************** 
+* views
+***************************/
+@import "views/contactUs.scss";
+@import "views/faq.scss";
+
+/************************** 
+* widget
+***************************/
+@import "widget/widget.scss";

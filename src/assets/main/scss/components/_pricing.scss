@@ -1,0 +1,134 @@
+/* --------------------------------------
+   13. Pricing
+-----------------------------------------*/
+
+.pricing {
+    background-color: $background-white;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    overflow: hidden;
+    @include respond("medium-devices") {
+        padding-bottom: 70px;
+    }
+    @include respond("phone-land") {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+    .pricing-plans {
+        .pricing-plan {
+            background-color: $background-color;
+            padding: 30px 20px;
+            text-align: $text-center;
+            border: $border-width-2 $border-style-solid #eee;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            @include respond("medium-devices") {
+                margin-bottom: 30px;
+            }
+            .pricing-head {
+                position: relative;
+                background-color: $background-white;
+                padding-top: 40px;
+                padding-bottom: 40px;
+                border: $border-width $border-style-solid #eee;
+                border-radius: 4px;
+                .pricing-title {
+                    text-transform: capitalize;
+                    position: relative;
+                    z-index: 1;
+                    h2 {
+                        color: $gray-3;
+                        font-weight: $font-600;
+                        font-size: 20px;
+                        letter-spacing: 1px;
+                        margin-bottom: 10px;
+                    }
+                }
+                .pricing-price {
+                    position: relative;
+                    z-index: 1;
+                    p {
+                        font-size: 48px;
+                        line-height: 1;
+                        font-weight: $font-500;
+                        margin: 0;
+                        color: $primary;
+                        .up {
+                            font-size: 19px;
+                            vertical-align: top;
+                        }
+                        .price {
+                            vertical-align: middle;
+                        }
+                        .down {
+                            font-size: 14px;
+                            vertical-align: bottom;
+                        }
+                    }
+                }
+                .flaticon-lotus {
+                    &:before {
+                        margin-left: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        color: $white;
+                        opacity: 0.08;
+                        font-size: 10em;
+                        z-index: 0;
+                    }
+                }
+            }
+            .pricing-features {
+                margin: 0;
+                padding: 30px 0;
+                li {
+                    font-size: 17px;
+                    margin-bottom: 15px;
+                    color: $gray-1;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &:hover {
+                -webkit-transform: translateY(-7px);
+                -moz-transform: translateY(-7px);
+                -o-transform: translateY(-7px);
+                -ms-transform: translateY(-7px);
+                transform: translateY(-7px);
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+            }
+            &.two {
+                .pricing-head {
+                    background: $primary;
+                    .pricing-title {
+                        h2 {
+                            color: $white;
+                        }
+                    }
+                    .pricing-price {
+                        p {
+                            color: $white;
+                        }
+                    }
+                }
+                .main-btn {
+                    background: $primary;
+                    color: $white;
+                }
+            }
+            .main-btn {
+                min-width: 155px;
+                background: transparent;
+                color: $primary;
+                border: $border-width-2 $border-style-solid $primary;
+                transition: color 0.1s;
+                &:hover {
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}

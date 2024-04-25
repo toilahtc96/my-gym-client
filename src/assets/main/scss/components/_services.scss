@@ -1,0 +1,211 @@
+/* --------------------------------------
+   7. Services
+-----------------------------------------*/
+
+.services {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    position: relative;
+    overflow: hidden;
+
+    @include respond("phone-land") {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .service {
+        background-color: #fff;
+        text-align: center;
+        padding: 25px 30px;
+        margin-bottom: 30px;
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &:hover {
+            .service-bg {
+                opacity: 1;
+            }
+        }
+
+        .service-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(123, 108, 213, 0.9);
+            z-index: 1;
+            opacity: 0;
+            -webkit-transition: all 0.8s ease-in-out;
+            -moz-transition: all 0.8s ease-in-out;
+            -o-transition: all 0.8s ease-in-out;
+            -ms-transition: all 0.8s ease-in-out;
+            transition: all 0.8s ease-in-out;
+
+            .flaticon-lotus {
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 146px;
+                    color: #fff;
+                    opacity: 0.1;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .service-item {
+            position: relative;
+            z-index: 2;
+
+            .service-icon {
+                i {
+                    background: #7b6cd5;
+                    display: inline-block;
+                    width: 70px;
+                    height: 70px;
+                    color: #fff;
+                    line-height: 70px;
+                    text-align: center;
+                    border-radius: 50%;
+                    -webkit-transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+                    transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+                    -webkit-animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+                    animation: pulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+                    -webkit-box-shadow: 0 0 0 0 rgba(123, 108, 213, 0.6);
+                    box-shadow: 0 0 0 0 rgba(123, 108, 213, 0.6);
+
+                    &:before {
+                        color: #fff;
+                        font-size: 45px;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            h4 {
+                color: #323232;
+                font-size: 18px;
+                line-height: 1.4;
+                font-weight: 500;
+                margin: 15px 0;
+                letter-spacing: 0.2px;
+                text-transform: capitalize;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 1.7;
+                margin: 0;
+                color: #888;
+            }
+        }
+
+        &.two {
+            .service-bg {
+                opacity: 1;
+            }
+        }
+
+        &:hover,
+        &.two {
+            .service-icon {
+                i {
+                    background: transparent;
+                    -webkit-animation: none;
+                    animation: none;
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                }
+            }
+
+            h4,
+            p {
+                color: #fff;
+            }
+        }
+
+        &.four,
+        &.six {
+            .service-bg {
+                @include respond("phone-land") {
+                    opacity: 1;
+                }
+            }
+
+            .service-icon {
+                i {
+                    @include respond("phone-land") {
+                        background: transparent;
+                        -webkit-animation: none;
+                        animation: none;
+                        -webkit-box-shadow: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+        &.three,
+        &.six {
+            .service-bg {
+                @include respond("medium-devices") {
+                    opacity: 1;
+                }
+            }
+
+            h4,
+            p {
+                @include respond("medium-devices") {
+                    color: $white;
+                }
+            }
+
+            .service-icon {
+                i {
+                    @include respond("medium-devices") {
+                        background: transparent;
+                        -webkit-animation: none;
+                        animation: none;
+                        -webkit-box-shadow: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+        &.four,
+        &.six {
+            .service-bg {
+                @include respond("phone-land") {
+                    opacity: 1;
+                }
+            }
+            h4,
+            p {
+                @include respond("phone-land") {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes pulse {
+    to {
+        -webkit-box-shadow: 0 0 0 9px rgba(123, 108, 213, 0);
+        box-shadow: 0 0 0 9px rgba(123, 108, 213, 0);
+    }
+}
+
+@keyframes pulse {
+    to {
+        -webkit-box-shadow: 0 0 0 9px rgba(123, 108, 213, 0);
+        box-shadow: 0 0 0 9px rgba(123, 108, 213, 0);
+    }
+}
