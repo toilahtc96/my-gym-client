@@ -2,11 +2,11 @@
   <div class="wrraper">
     <div class="headrtopone">
       <app-bar-top></app-bar-top>
-      <app-header-inner></app-header-inner>
+      <!-- <app-header-inner></app-header-inner> -->
     </div>
 
-    <app-header></app-header>
-    <app-services></app-services>
+    <!-- <app-header></app-header> -->
+    <!-- <app-services></app-services>
     <app-about-us></app-about-us>
     <app-schedle> </app-schedle>
     <app-call-to-action></app-call-to-action>
@@ -16,26 +16,26 @@
     <app-testimonials> </app-testimonials>
     <app-blog> </app-blog>
     <app-contact></app-contact>
-    <app-newsLetter></app-newsLetter>
-    <app-footer> </app-footer>
+    <app-newsLetter></app-newsLetter> -->
+    <!-- <app-footer> </app-footer> -->
   </div>
 </template>
 
 <script>
 import UpperBar from "../components/upperBar.vue";
-import headerInner from "../components/headerInner";
-import headerV1 from "../header/headerV1";
-import services from "../components/services";
-import aboutUs from "../components/aboutUs";
-import classSchedle from "../components/schedule";
-import callToAction from "../components/callToAction";
-import events from "../components/events";
-import team from "../components/team";
-import pricing from "../components/pricing";
-import testimonials from "../components/testimonials";
-import blog from "../components/blog";
-import contact from "../components/contact";
-import newsLetter from "../components/newsletter";
+import headerInner from "../components/headerInner.vue";
+import headerV1 from "../header/headerV1.vue";
+import services from "../components/services.vue";
+import aboutUs from "../components/aboutUs.vue";
+import classSchedle from "../components/schedule.vue";
+import callToAction from "../components/callToAction.vue";
+import events from "../components/events.vue";
+import team from "../components/team.vue";
+import pricing from "../components/pricing.vue";
+import testimonials from "../components/testimonials.vue";
+import blog from "../components/blog.vue";
+import contact from "../components/contact.vue";
+import newsLetter from "../components/newsletter.vue";
 import footer from "../components/footer.vue";
 
 export default {
