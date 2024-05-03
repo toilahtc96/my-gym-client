@@ -2,11 +2,11 @@
   <div class="wrraper">
     <div class="headrtopone">
       <app-bar-top></app-bar-top>
-      <!-- <app-header-inner></app-header-inner> -->
+      <app-header-inner></app-header-inner>
     </div>
 
-    <!-- <app-header></app-header> -->
-    <!-- <app-services></app-services>
+    <app-header></app-header>
+    <app-services></app-services>
     <app-about-us></app-about-us>
     <app-schedle> </app-schedle>
     <app-call-to-action></app-call-to-action>
@@ -16,8 +16,8 @@
     <app-testimonials> </app-testimonials>
     <app-blog> </app-blog>
     <app-contact></app-contact>
-    <app-newsLetter></app-newsLetter> -->
-    <!-- <app-footer> </app-footer> -->
+    <app-newsLetter></app-newsLetter>
+    <app-footer> </app-footer>
   </div>
 </template>
 
