@@ -9,94 +9,16 @@
         <h2>What We Do</h2>
       </div>
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="service one">
+        <div class="col-lg-4 col-md-6 col-sm-12" v-for="item in services" v-bind:key="item.id">
+          <div :class=item.divClass>
             <div class="service-bg"><i class="flaticon-lotus"></i></div>
             <div class="service-item">
               <div class="service-icon">
-                <i class="flaticon-woman-on-lotus-position-front-view"></i>
+                <i :class=item.icon></i>
               </div>
-              <h4>Heal your emotions</h4>
+              <h4>{{ item.title }}</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusm tempor incididunt ut labore et.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="service two">
-            <div class="service-bg"><i class="flaticon-lotus"></i></div>
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="flaticon-woman-stretching-arms-and-flexing-legs"></i>
-              </div>
-              <h4>Body &amp; Spirituality</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusm tempor incididunt ut labore et.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="service three">
-            <div class="service-bg"><i class="flaticon-lotus"></i></div>
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="flaticon-woman-stretching-her-body-on-the-floor"></i>
-              </div>
-              <h4>Refreshens your body</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusm tempor incididunt ut labore et.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="service four">
-            <div class="service-bg"><i class="flaticon-lotus"></i></div>
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="flaticon-woman-stretching-on-floor"></i>
-              </div>
-              <h4>Enjoy your life</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusm tempor incididunt ut labore et.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="service five">
-            <div class="service-bg"><i class="flaticon-lotus"></i></div>
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="flaticon-woman-stretching-back"></i>
-              </div>
-              <h4>Balance Body &amp; Mind</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusm tempor incididunt ut labore et.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="service six">
-            <div class="service-bg"><i class="flaticon-lotus"></i></div>
-            <div class="service-item">
-              <div class="service-icon">
-                <i
-                  class="flaticon-woman-stretching-and-flexing-legs-with-arms-up"
-                ></i>
-              </div>
-              <h4>Mind &amp; Serenity</h4>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusm tempor incididunt ut labore et.
+                {{ item.information }}
               </p>
             </div>
           </div>
@@ -108,7 +30,29 @@
 </template>
 
 <script>
+import axios from "@/core/httpClient";
 export default {
+  data() {
+    return {
+      services: [],
+
+    }
+  },
+  created() {
+    axios.get(`/public/service/get-six-active`).then((data) => {
+      this.services = data.data;
+      for (var i = 0; i < this.services.length; i++) {
+        if (i == 1) {
+          this.services[i].divClass = "service two"
+        } else {
+          this.services[i].divClass = "service one"
+        }
+      }
+    }).catch((err) => {
+      // message.error("Has error when get header data!" ,err);
+      console.log(err)
+    })
+  }
 };
 </script>
 

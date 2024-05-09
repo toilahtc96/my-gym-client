@@ -1,40 +1,18 @@
 <template>
   <!-- Start About Us -->
-  <section class="about-us" id="about-us">
+  <section class="about-us" id="about-us" v-if="aboutUs">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 info">
           <div class="about-info">
-            <h3>Welcome To Pranayama Studio</h3>
-            <h4>You can always control what goes on inside</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusm tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-              sed do eiusm tempor incididunt ut labore et dolore magna.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusm tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div class="about-progress">
-              <div class="progress-container">
-                <span class="percent" style="left: calc(90% - 21px);">90%</span>
-                <h4>Metabolism</h4>
-                <div class="progress">
-                  <div class="progress-bar"></div>
-                </div>
-              </div>
-              <div class="progress-container">
-                <span class="percent" style="left: calc(85% - 21px);">85%</span>
-                <h4>Flexibility</h4>
-                <div class="progress">
-                  <div class="progress-bar"></div>
-                </div>
-              </div>
-              <div class="progress-container">
-                <span class="percent" style="left: calc(70% - 21px);">70%</span>
-                <h4>Breathing</h4>
+            <h3>{{ this.aboutUs.smallTitle }}</h3>
+            <h4>{{ this.aboutUs.mainTitle }}</h4>
+            <div v-html="this.aboutUs.information"></div>
+            <div class="about-progress" v-if="this.aboutUs.benefitPercentInfoArray">
+              <div class="progress-container" v-for="benefit in this.aboutUs.benefitPercentInfoArray"
+                v-bind:key="benefit.id">
+                <span class="percent" :style="benefit.percentStyle">{{ benefit.percent }}</span>
+                <h4>{{ benefit.name }}</h4>
                 <div class="progress">
                   <div class="progress-bar"></div>
                 </div>
@@ -46,7 +24,7 @@
         <div class="col-lg-6 image">
           <div class="about-image">
             <div class="about-bg"><i class="flaticon-lotus"></i></div>
-            <img class="img-fluid" src="https://via.placeholder.com/700x666" alt="" />
+            <img class="img-fluid" :src="this.aboutUs.image" alt="" />
           </div>
         </div>
       </div>
@@ -56,7 +34,33 @@
 </template>
 
 <script>
+
+import axios from "@/core/httpClient";
 export default {
+  data() {
+    return {
+      aboutUs: null,
+
+    }
+  },
+  created() {
+    debugger;
+    axios.get(`/public/about-us/get-first-active`).then((data) => {
+      this.aboutUs = data.data;
+      if (this.aboutUs.benefitPercentInfo) {
+        // const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+        this.aboutUs.benefitPercentInfoArray = JSON.parse(this.aboutUs.benefitPercentInfo);
+        for (var i=0;i< this.aboutUs.benefitPercentInfoArray.length; i++) {
+          // left: calc(90% - 21px);
+          this.aboutUs.benefitPercentInfoArray[i].percentStyle = "left: calc(" + this.aboutUs.benefitPercentInfoArray[i].percent + "% - 21px);"
+          console.log(this.aboutUs.benefitPercentInfoArray[i])
+        }
+      }
+    }).catch((err) => {
+      // message.error("Has error when get header data!" ,err);
+      console.log(err)
+    })
+  }
 };
 </script>
 
