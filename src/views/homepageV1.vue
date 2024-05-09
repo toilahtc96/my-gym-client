@@ -55,8 +55,9 @@ export default {
     "app-contact": contact,
     "app-newsLetter": newsLetter,
     "app-footer": footer,
-  },
+  }
 };
+
 </script>
 
 <style lang="scss" scoped></style>

@@ -19,6 +19,7 @@
         "@popperjs/core": "^2.11.6",
         "@vitejs/plugin-vue": "^1.6.1",
         "ant-design-vue": "^3.2.12",
+        "axios": "^1.6.5",
         "bootstrap-vue": "^2.21.2",
         "caniuse-lite": "^1.0.30001257",
         "vite": "^2.5.4",
