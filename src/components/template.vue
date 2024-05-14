@@ -1,9 +1,6 @@
 <template>
-  <div>
-    GYM ADMIN PAGE
-  </div>
-</template>
 
+</template>
 <script>
 
 export default {

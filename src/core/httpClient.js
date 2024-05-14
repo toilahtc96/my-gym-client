@@ -10,7 +10,8 @@ axios.interceptors.request.use(
     if (!request.headers) {
       return request;
     }
-    const accessToken = localStorage.getItem("accessToken");
+    let accessToken = localStorage.getItem("accessToken");
+    accessToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjb25naHQiLCJpYXQiOjE3MTU2OTc2NzksImV4cCI6MTcxNTczMzY3OX0.wS05IaOEe2s2uGLAu15Pn1J9T5FEPKxsi1ZmWK91fQEqOOyD13aSlvyaqW28QtorhmGANeI0umYbc-FXYf35qw";
     if (accessToken) {
       request.headers.Authorization = `Bearer ${accessToken}`;
     }

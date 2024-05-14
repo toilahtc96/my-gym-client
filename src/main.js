@@ -9,6 +9,11 @@ import VueMeta from 'vue-meta';
 import VueParticles from 'vue-particles';
 import Antd from "ant-design-vue";
 import "ant-design-vue/dist/antd.css";  // Ensure the CSS is imported
+import VueCompositionAPI from '@vue/composition-api';
+
+Vue.use(VueCompositionAPI);
+
+Vue.config.productionTip = false;
 
 Vue.use(VueSmoothScroll);
 Vue.use(VueScrollFixedNavbar);
@@ -18,7 +23,6 @@ Vue.use(VueParticles);
 Vue.use(Antd);  // Use Ant Design Vue here
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
-
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import "../src/assets/main/css/fonts.css";

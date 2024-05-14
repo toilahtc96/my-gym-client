@@ -169,13 +169,23 @@ const customerRoutes = [{
 const adminRouter = [
     {
         path: "/admin",
-        name: "admin-home.vue",
         component: () =>
             import("../layouts/dynamic/dynamic-layout.vue"),
         children: [
             {
                 path: '',
+                name: 'main',
                 component: () => import("../views/admin/admin-home.vue")
+            },
+            {
+                path: 'header/add',
+                name: 'header-add',
+                component: ()=> import("../views/admin/main-header/add/add.vue")
+            },
+            {
+                path: 'header',
+                name: 'header-list',
+                component: ()=> import("../views/admin/main-header/list/list.vue")
             }
 
         ]
