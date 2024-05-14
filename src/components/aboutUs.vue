@@ -44,7 +44,6 @@ export default {
     }
   },
   created() {
-    debugger;
     axios.get(`/public/about-us/get-first-active`).then((data) => {
       this.aboutUs = data.data;
       if (this.aboutUs.benefitPercentInfo) {
