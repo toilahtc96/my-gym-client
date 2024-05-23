@@ -1,9 +1,9 @@
 <template>
   <!-- Start Header V1 -->
-  <carousel class="home" id="home" :items="1" v-if="headerInfors && headerInfors.length">
     <!-- v-for="header in headerInfors" v-bind:key="header.id" -->
-    <div v-for="header in headerInfors" v-bind:key="header.id" class="bg-cover"
-      :style="{ 'background-image': 'url(' + header.image + ')' }">
+  <Carousel class="home" id="home" v-if="headerInfors && headerInfors.length">
+    <Slide v-for="header in headerInfors" v-bind:key="header.id" class="bg-cover"
+      :style="{ 'background-image': 'url(' + header.image + ')' }" style="height: 100vh; width: 100%; background-size: cover; background-position: center;">
       <div class="overlay">
         <div class="home-content">
           <div class="text-center">
@@ -20,35 +20,29 @@
           </div>
         </div>
       </div>
-    </div>
-
-  </carousel>
+    </Slide>
+  </Carousel>
   <!-- End Header V1 -->
 </template>
-
 <script>
-import carousel from "vue-owl-carousel";
+import { Carousel, Slide } from 'vue3-carousel';
 import axios from "@/core/httpClient";
-// import { message } from "ant-design-vue";
-// import { HeaderService } from '@/services/header'; // Assuming your service file is named header.js and is located in the services folder
-export default {
 
-  components: { carousel },
+export default {
+  components: { Carousel, Slide },
   data() {
     return {
       headerInfors: []
     };
   },
   created() {
-    // Instantiate MainInformationService
     axios.get(`/public/header/get-three-active`).then((data) => {
       this.headerInfors = data.data;
     }).catch((err) => {
-      // message.error("Has error when get header data!" ,err);
       console.log(err)
     })
   }
 };
 </script>
-
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

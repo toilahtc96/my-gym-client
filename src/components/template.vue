@@ -1,15 +1,19 @@
 <template>
-
 </template>
-<script>
+
+<script lang="ts">
+import axios from "@/core/httpClient";
 
 export default {
-  data: function () {
+  data() {
     return {
-     
-    };
+
+    }
+  },
+  created() {
+  },
+  methods: {
+   
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

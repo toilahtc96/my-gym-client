@@ -1,5 +1,5 @@
 <template>
-  <VueScrollFixedNavbar>
+  <div :class="{ 'scroll-fixed-navbar': isScrolled }">
     <div>
       <!-- Start Navbar -->
       <div class="header-inner">
@@ -212,11 +212,10 @@
       </div>
       <!--  End Side Menu -->
     </div>
-  </VueScrollFixedNavbar>
+  </div>
 </template>
 
 <script>
-import { VueScrollFixedNavbar } from "vue-scroll-fixed-navbar";
 export default {
   data: function () {
     return {
@@ -224,9 +223,7 @@ export default {
       formOpen: false,
     };
   },
-  components: {
-    VueScrollFixedNavbar,
-  },
+ 
 };
 </script>
 

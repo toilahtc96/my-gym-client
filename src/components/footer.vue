@@ -49,10 +49,10 @@
             <div class="footer-item">
               <h4>Company</h4>
               <ul class="list-unstyled">
-                <router-link to="/index-1" tag="li"><a target="_blank">Home</a></router-link>
-                <router-link to="/about-us" tag="li"><a target="_blank">About us</a></router-link>
-                <router-link to="/services" tag="li"><a target="_blank">Services</a></router-link>
-                <router-link to="/team" tag="li"><a target="_blank">Our Team</a></router-link>
+                <router-link to="/index-1" ><a target="_blank">Home</a></router-link> <br/>
+                <router-link to="/about-us" ><a target="_blank">About us</a></router-link> <br/>
+                <router-link to="/services" ><a target="_blank">Services</a></router-link> <br/>
+                <router-link to="/team" ><a target="_blank">Our Team</a></router-link>
               </ul>
             </div>
           </div>
@@ -60,10 +60,10 @@
             <div class="footer-item">
               <h4>Menu</h4>
               <ul class="list-unstyled">
-                <router-link to="/pricing" tag="li"><a target="_blank">Pricing Plans</a></router-link>
-                <router-link to="/blog-2-column" tag="li"><a target="_blank">News</a></router-link>
-                <router-link to="/events" tag="li"><a target="_blank">events</a></router-link>
-                <router-link to="/contact-us" tag="li"><a target="_blank">Contact</a></router-link>
+                <router-link to="/pricing" ><a target="_blank">Pricing Plans</a></router-link><br/>
+                <router-link to="/blog-2-column" ><a target="_blank">News</a></router-link><br/>
+                <router-link to="/events" ><a target="_blank">events</a></router-link><br/>
+                <router-link to="/contact-us" ><a target="_blank">Contact</a></router-link>
               </ul>
             </div>
           </div>
@@ -71,10 +71,10 @@
             <div class="footer-item">
               <h4>Support</h4>
               <ul class="list-unstyled">
-                <router-link to="/contact-us" tag="li"><a target="_blank">Support Center</a></router-link>
-                <router-link to="/about-us" tag="li"><a target="_blank">Partners</a></router-link>
-                <router-link to="/faq" tag="li"><a target="_blank">FAQ</a></router-link>
-                <router-link to="/404" tag="li"><a target="_blank">404</a></router-link>
+                <router-link to="/contact-us" ><a target="_blank">Support Center</a></router-link><br/>
+                <router-link to="/about-us" ><a target="_blank">Partners</a></router-link><br/>
+                <router-link to="/faq" ><a target="_blank">FAQ</a></router-link><br/>
+                <router-link to="/404" ><a target="_blank">404</a></router-link>
               </ul>
             </div>
           </div>

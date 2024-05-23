@@ -1,11 +1,33 @@
-import Vue from "vue";
-import Vuex from "vuex"
+import { reactive, provide, inject } from 'vue';
 
-Vue.use(Vuex);
+const StoreSymbol = Symbol('store');
 
-export default new Vuex.Store({
-    state: {},
-    mutations: {},
-    actions: {},
-    modules: {}
-});
+export const createStore = () => {
+    const state = reactive({
+        // Your state here
+    });
+
+    const mutations = {
+        // Your mutations here
+    };
+
+    const actions = {
+        // Your actions here
+    };
+
+    const store = {
+        state,
+        mutations,
+        actions
+    };
+
+    provide(StoreSymbol, store);
+};
+
+export const useStore = () => {
+    const store = inject(StoreSymbol);
+    if (!store) {
+        throw new Error('Did not inject store');
+    }
+    return store;
+};
