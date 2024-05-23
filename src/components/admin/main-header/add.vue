@@ -36,10 +36,7 @@ interface FormState {
   status: string | undefined;
 }
 
-export default defineComponent({
-  name: 'MyFormComponent',
-  setup() {
-    const formState = reactive({
+const formState = reactive({
       firstTitle: '',
       bigTitle: '',
       moreInformation: '',
@@ -47,7 +44,6 @@ export default defineComponent({
       statusBoolean: true,
       status: 'ACTIVE'
     } as FormState);
-
     const rules = {
       firstTitle: [
         { required: true, message: 'Please input First Title', trigger: 'blur' },
@@ -86,15 +82,4 @@ export default defineComponent({
     watch(() => formState.statusBoolean, (newStatus) => {
       formState.status = newStatus ? 'ACTIVE' : 'BLOCK';
     });
-
-    return {
-      formState,
-      rules,
-      labelCol,
-      wrapperCol,
-      onSubmit,
-      resetForm
-    };
-  }
-});
 </script>

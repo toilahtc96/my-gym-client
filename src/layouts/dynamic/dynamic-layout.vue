@@ -1,41 +1,33 @@
-<template>
-  <div>
-    <component :is="layout"></component>
-  </div>
-</template>
-
-<script>
+<script setup>
+import { ref, watch, markRaw } from "vue";
+import {useRoute} from "vue-router";
 import DefaultLayout from "@/layouts/default/default-layout.vue";
-import Vue from 'vue';
 
-export default {
-  data() {
-    return {
-      layout: DefaultLayout,
-      router: null,
-      route: null
-    };
-  },
-  created() {
-    this.route = Vue.$route;
-    this.watchRoute();
-  },
-  methods: {
-    watchRoute() {
-      this.$watch(
-        "route",
-        to => {
-          try {
-            const metaLayout =
-              to.meta.layout && require(`../${to.meta.layout}/index.vue`);
-            this.layout = metaLayout || DefaultLayout;
-          } catch (e) {
-            this.layout = DefaultLayout;
-          }
-        },
-        { immediate: true, deep: true }
-      );
+const route = useRoute();
+const layout = ref(null);
+
+watch(
+  route,
+  (to) => {
+    try {
+      const metaLayout =
+        to.meta.layout && import(`../${to.meta.layout}/index.vue`);
+      layout.value = markRaw(metaLayout || DefaultLayout);
+    } catch (e) {
+      layout.value = markRaw(DefaultLayout);
     }
-  }
-};
+  },
+  { flush: "pre", immediate: true, deep: true }
+);
 </script>
+
+<template>
+  <suspense>
+    <template #default>
+      <component :is="layout" />
+    </template>
+    <template #fallback>
+      <div>Loading...</div>
+    </template>
+  </suspense>
+</template>
