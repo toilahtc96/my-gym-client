@@ -52,7 +52,6 @@ export default {
         for (var i=0;i< this.aboutUs.benefitPercentInfoArray.length; i++) {
           // left: calc(90% - 21px);
           this.aboutUs.benefitPercentInfoArray[i].percentStyle = "left: calc(" + this.aboutUs.benefitPercentInfoArray[i].percent + "% - 21px);"
-          console.log(this.aboutUs.benefitPercentInfoArray[i])
         }
       }
     }).catch((err) => {

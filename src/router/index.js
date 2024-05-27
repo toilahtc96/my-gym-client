@@ -176,6 +176,12 @@ const adminRouter = [
                 component: () => import("../views/admin/admin-home.vue")
             },
             {
+                path: 'header/edit/:id',
+                name: 'header-edit',
+                component: () => import("../views/admin/main-header/edit/edit.vue")
+
+            },
+            {
                 path: 'header/add',
                 name: 'header-add',
                 component: () => import("../views/admin/main-header/add/add.vue")
